@@ -1,0 +1,43 @@
+{
+    "name": "cyim-nicolasl/omnipay-payline",
+    "description": "Payline gateway for the Omnipay PHP payment processing library",
+    "keywords": [
+        "omnipay",
+        "payline",
+        "payment"
+    ],
+    "homepage": "https://github.com/ck-developer/omnipay-payline",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas LEPIEZ",
+            "email": "n.lepiez@cyim.com",
+        }
+    ],
+    "require": {
+        "php" : ">=5.3.0 || >=7.0",
+        "ext-soap": "*",
+        "league/omnipay": "^3"
+    },
+    "require-dev": {
+        "omnipay/tests": "~2.0",
+        "friendsofphp/php-cs-fixer": "~1.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\Payline\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnipay\\Payline\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "git-hook-install": "php .github/hooks/install.php",
+        "post-install-cmd": [
+            "@git-hook-install"
+        ]
+    }
+}

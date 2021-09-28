@@ -24,9 +24,9 @@ abstract class AbstractRequest extends BaseAbstractRequest
     {
         $data = array(
             'payment' => array('contractNumber' => $this->getContractNumber()),
-            'notificationURL' => $this->getReturnUrl(),
-            'returnURL' => $this->getCancelUrl(),
-            'cancelURL' => $this->getNotifyUrl(),
+            'notificationURL' => $this->getNotifyUrl(),
+            'returnURL' => $this->getReturnUrl(),
+            'cancelURL' => $this->getCancelUrl(),
         );
 
         return $data;

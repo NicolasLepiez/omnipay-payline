@@ -79,6 +79,16 @@ class WebGateway extends AbstractGateway
      *
      * @return \Omnipay\Payline\Message\Web\CompleteAuthorizeRequest
      */
+    public function completePurchase(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\Payline\Message\Web\CompleteAuthorizeRequest', $parameters);
+    }
+
+    /**
+     * @param array $parameters
+     *
+     * @return \Omnipay\Payline\Message\Web\CompleteAuthorizeRequest
+     */
     public function completeAuthorize(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Payline\Message\Web\CompleteAuthorizeRequest', $parameters);

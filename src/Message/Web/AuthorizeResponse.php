@@ -12,13 +12,14 @@
 namespace Omnipay\Payline\Message\Web;
 
 use Omnipay\Payline\Message\AbstractResponse;
+use Omnipay\Common\Message\RedirectResponseInterface;
 
 /**
  * AuthorizeResponse.
  *
  * @author Claude Khedhiri <claude@khedhiri.com>
  */
-class AuthorizeResponse extends AbstractResponse
+class AuthorizeResponse extends AbstractResponse implements RedirectResponseInterface
 {
     public function isRedirect()
     {

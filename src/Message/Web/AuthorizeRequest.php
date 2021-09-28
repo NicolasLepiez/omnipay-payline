@@ -117,6 +117,7 @@ class AuthorizeRequest extends AbstractRequest
 
         if ($this->getContractNumber()) {
             $data['payment']['contractNumber'] = $this->getContractNumber();
+            $data['selectedContractList'] = [$this->getContractNumber()];
         }
 
         $data['order'] = array(

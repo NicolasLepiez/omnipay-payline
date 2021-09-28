@@ -191,8 +191,8 @@ abstract class AbstractGateway extends OmnipayAbstractGateway
             'style' => defined(SOAP_DOCUMENT) ? SOAP_DOCUMENT : 2,
             'use' => defined(SOAP_LITERAL) ? SOAP_LITERAL : 2,
 	        'connection_timeout' => 5,
-	        'version' => 'Omnipay Payline v2 - WSDL v4.49',
-	        'user_agent' => "PHP\r\nversion: Omnipay Payline v2 - WSDL v4.49",
+	        'version' => 'Omnipay Payline v3 - WSDL v4.68',
+	        'user_agent' => "PHP\r\nversion: Omnipay Payline v3 - WSDL v4.68",
         );
 
         if (strlen($this->getProxyHost()) > 1) {

@@ -24,7 +24,8 @@ abstract class AbstractResponse extends OmnipayAbstractResponse
 
     public function isSuccessful()
     {
-        return $this->getCode() == self::SUCCESSFUL_CODE;
+        return false;
+        //return $this->getCode() == self::SUCCESSFUL_CODE;
     }
 
     public function getCode()

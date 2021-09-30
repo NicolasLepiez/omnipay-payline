@@ -23,7 +23,7 @@ class AuthorizeResponse extends AbstractResponse implements RedirectResponseInte
 {
     public function isRedirect()
     {
-        return $this->isSuccessful();
+        return $this->getCode() == self::SUCCESSFUL_CODE;
     }
 
     public function getRedirectUrl()

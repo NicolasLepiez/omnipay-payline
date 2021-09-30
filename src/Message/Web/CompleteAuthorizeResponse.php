@@ -20,6 +20,11 @@ use Omnipay\Payline\Message\AbstractResponse;
  */
 class CompleteAuthorizeResponse extends AbstractResponse
 {
+    public function isSuccessful()
+    {
+        //return false;
+        return $this->getCode() == self::SUCCESSFUL_CODE;
+    }
     /**
      * @return array
      */
@@ -60,11 +65,11 @@ class CompleteAuthorizeResponse extends AbstractResponse
         return (array) $this->data->authentication3DSecure;
     }
 
-    /**
-     * @return array
-     */
-    public function getTransactionId()
-    {
-        return $this->data->transaction->id;
-    }
+    // /**
+    //  * @return array
+    //  */
+    // public function getTransactionId()
+    // {
+    //     return $this->data->transaction->id;
+    // }
 }
